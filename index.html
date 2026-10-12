@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1F5FD0">
+<title>Boat delivery · أسوان</title>
+<meta name="description" content="اطلب قاربًا على النيل في أسوان كما تطلب سيارة: اختر وجهتك، تتبّع القارب، وادفع.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+:root{--sky1:#1B56C4;--sky2:#5C9BEA;--sky3:#BFDDFB;--paper:#F4ECDC;--paper2:#EADFC8;--ink:#14213D;--muted:#5B5A55;--gold:#D9A441;--clay:#B5532E;--nile:#0E6E78;--white:#fff;
+  --serif:'Amiri','Cormorant Garamond',Georgia,serif;--sans:'IBM Plex Sans Arabic',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 var(--sans);overflow-x:hidden}
+html[lang=en] body{font-family:'IBM Plex Sans Arabic',system-ui,sans-serif}
+html[lang=en] h1,html[lang=en] h2,html[lang=en] .serif{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic}
+[data-l]{display:none}html[lang=ar] [data-l=ar],html[lang=en] [data-l=en]{display:inline}
+html[lang=ar] div[data-l=ar],html[lang=en] div[data-l=en],html[lang=ar] p[data-l=ar],html[lang=en] p[data-l=en]{display:block}
+a{color:inherit}
+.bar{position:fixed;z-index:20;inset-inline:0;top:0;display:flex;justify-content:space-between;align-items:center;padding:12px 18px;color:#fff;transition:background .3s,color .3s,box-shadow .3s}
+.bar.solid{background:rgba(244,236,220,.94);color:var(--ink);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(20,33,61,.12)}
+.brand{font:700 1.15rem 'Cormorant Garamond',Georgia,serif;letter-spacing:.02em;text-decoration:none;direction:ltr}
+.lang{border:1.5px solid currentColor;background:none;color:inherit;border-radius:99px;padding:4px 14px;font:600 .85rem var(--sans);cursor:pointer;min-height:36px}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-start;padding:128px 22px 120px;color:#fff;overflow:hidden;background:linear-gradient(180deg,var(--sky1) 0%,var(--sky2) 58%,var(--sky3) 100%)}
+.hero svg.art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero svg.land{position:absolute;inset-inline:0;bottom:0;width:100%;height:50%;pointer-events:none}
+@media(min-width:900px){.hero svg.land{height:62%}}
+.sunD{position:absolute;inset-inline-end:8%;top:24%;width:min(46vw,380px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#FFF4CC 0 14%,rgba(255,226,140,.65) 30%,rgba(255,226,140,0) 68%);pointer-events:none;will-change:transform}
+.hero .in{position:relative;z-index:2;max-width:720px;margin-inline:auto;width:100%}
+.eyebrow{font:500 .95rem var(--sans);letter-spacing:.14em;opacity:.9;margin-bottom:14px}
+h1{font:700 clamp(2.6rem,11vw,5.2rem)/1.08 var(--serif);margin:0 0 18px;text-wrap:balance;text-shadow:0 2px 24px rgba(10,30,80,.35)}
+.lead{font-size:clamp(1.05rem,3.6vw,1.3rem);max-width:30em;opacity:.97;margin:0 0 28px;text-shadow:0 1px 14px rgba(10,30,80,.4)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:99px;font:600 1.05rem var(--sans);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn.gold{background:var(--gold);color:#2a1c05;box-shadow:0 8px 24px rgba(217,164,65,.45)}
+.btn.ghost{border-color:rgba(255,255,255,.85);color:#fff}
+.btn.ink{background:var(--ink);color:#fff}
+.scroll{position:absolute;z-index:2;bottom:22px;inset-inline:0;text-align:center;font-size:.85rem;opacity:.85;letter-spacing:.12em}
+.scroll i{display:block;width:2px;height:34px;margin:8px auto 0;background:linear-gradient(#fff,transparent);animation:drip 1.8s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.cloud{animation:drift linear infinite}.c1{animation-duration:90s}.c2{animation-duration:140s;animation-delay:-50s}.c3{animation-duration:110s;animation-delay:-20s}
+@keyframes drift{from{transform:translateX(-300px)}to{transform:translateX(1100px)}}
+.sail{animation:sail 52s linear infinite}
+@keyframes sail{from{transform:translate(-260px,0)}to{transform:translate(1900px,0)}}
+.bob{animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px) rotate(-.8deg)}}
+.wave{animation:wave 7s ease-in-out infinite alternate}
+@keyframes wave{to{transform:translateX(-40px)}}
+/* sections */
+section{position:relative;padding:84px 22px}
+.wrap{max-width:860px;margin-inline:auto}
+h2{font:700 clamp(2rem,7vw,3.2rem)/1.15 var(--serif);margin:0 0 14px;text-wrap:balance}
+.kicker{font:600 .8rem var(--sans);letter-spacing:.16em;color:var(--clay);margin-bottom:10px;text-transform:uppercase}
+.idea{background:var(--paper)}
+.idea p.big{font:400 clamp(1.4rem,5vw,2.1rem)/1.5 var(--serif);max-width:24em}
+.pillars{display:grid;gap:14px;margin-top:34px}
+@media(min-width:700px){.pillars{grid-template-columns:repeat(3,1fr)}}
+.pill{background:var(--paper2);border-radius:22px;padding:22px}
+.pill b{display:block;font:700 1.35rem var(--serif);margin-bottom:4px}
+.pill span.ic{display:block;width:54px;height:40px;margin-bottom:10px;color:var(--nile)}
+.how{background:var(--ink);color:#fff}
+.how .kicker{color:var(--gold)}
+.steps{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 34px;padding-inline-start:64px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;inset-inline-start:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--gold);color:#2a1c05;display:grid;place-items:center;font:700 1.3rem 'Cormorant Garamond',serif}
+.steps li::after{content:"";position:absolute;inset-inline-start:21px;top:50px;bottom:6px;border-inline-start:2px dotted rgba(255,255,255,.35)}
+.steps li:last-child::after{display:none}
+.steps b{display:block;font:700 1.4rem var(--serif)}
+.steps span{opacity:.85}
+.boats{background:linear-gradient(180deg,var(--paper),var(--paper2))}
+.cards{display:grid;gap:14px;margin-top:30px}
+@media(min-width:700px){.cards{grid-template-columns:repeat(2,1fr)}}
+.card{background:#fff;border-radius:24px;padding:22px;box-shadow:0 10px 30px rgba(20,33,61,.08)}
+.card svg{width:100%;height:84px;color:var(--ink);margin-bottom:8px}
+.card b{font:700 1.4rem var(--serif)}
+.card small{display:block;color:var(--muted)}
+.map{background:var(--paper)}
+.river{position:relative;margin:34px 0 0;padding-inline-start:46px}
+.river::before{content:"";position:absolute;inset-inline-start:15px;top:0;bottom:0;width:14px;border-radius:99px;background:linear-gradient(180deg,#7FB4F0,#2F6FD0)}
+.pt{position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0}
+.pt::before{content:"";position:absolute;inset-inline-start:-37px;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--paper);border:3px solid var(--nile)}
+.pt.me::before{background:var(--gold);border-color:var(--ink);transform:scale(1.25)}
+.pt b{font:700 1.2rem var(--serif)}
+.pt em{font-style:normal;font-weight:600;font-size:.95rem;color:var(--nile);white-space:nowrap}
+.pt.me b{color:var(--clay)}
+.built{background:var(--paper2)}
+.grid{display:grid;gap:12px;margin-top:28px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+.feat{background:var(--paper);border-radius:20px;padding:18px 20px;border-inline-start:6px solid var(--gold)}
+.feat b{display:block;font:700 1.2rem var(--serif)}
+.feat span{color:var(--muted);font-size:.95rem}
+.note{margin-top:22px;font-size:.92rem;color:var(--muted);padding:14px 18px;border-radius:14px;background:rgba(20,33,61,.06)}
+.end{text-align:center;color:#fff;background:linear-gradient(180deg,var(--sky1),#0B2C6B);padding:100px 22px}
+.end h2{color:#fff}
+footer{background:#0B2C6B;color:rgba(255,255,255,.75);text-align:center;padding:26px 18px 40px;font-size:.9rem}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style></head><body>
+<header class="bar" id="bar"><a class="brand" href="#top">Boat delivery</a><button class="lang" id="lang" type="button" aria-label="Language">English</button></header>
+
+<section class="hero" id="top">
+<div class="sunD" id="sunG" aria-hidden="true"></div>
+<svg class="art" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><filter id="soft"><feGaussianBlur stdDeviation="6"/></filter></defs>
+<g fill="#fff" opacity=".9" filter="url(#soft)">
+<g class="cloud c1"><ellipse cx="150" cy="180" rx="90" ry="26"/><ellipse cx="205" cy="165" rx="60" ry="26"/><ellipse cx="110" cy="170" rx="50" ry="20"/></g>
+<g class="cloud c2"><ellipse cx="420" cy="290" rx="110" ry="28"/><ellipse cx="480" cy="272" rx="70" ry="26"/></g>
+<g class="cloud c3"><ellipse cx="60" cy="380" rx="80" ry="20"/><ellipse cx="120" cy="366" rx="50" ry="20"/></g></g></svg>
+<svg class="land" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<defs><linearGradient id="nl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3C86D8"/><stop offset="1" stop-color="#0E4C93"/></linearGradient></defs>
+<path d="M0 330 L120 280 L260 316 L420 250 L600 310 L780 268 L960 326 L1140 262 L1330 312 L1480 270 L1600 300 L1600 400 L0 400Z" fill="#8A6A4C"/>
+<path d="M0 360 L160 322 L330 352 L520 306 L700 350 L880 322 L1070 356 L1250 318 L1430 350 L1600 330 L1600 400 L0 400Z" fill="#6E513A"/>
+<rect y="376" width="1600" height="324" fill="url(#nl)"/>
+<g stroke="#BFE0FF" stroke-width="4" stroke-linecap="round" opacity=".5" fill="none"><g class="wave"><path d="M80 440q40-14 80 0t80 0t80 0"/><path d="M620 470q40-14 80 0t80 0t80 0"/><path d="M1100 430q40-14 80 0t80 0t80 0"/><path d="M300 560q40-14 80 0t80 0t80 0"/><path d="M860 590q40-14 80 0t80 0t80 0"/><path d="M1300 540q40-14 80 0t80 0t80 0"/><path d="M-20 640q40-14 80 0t80 0t80 0t80 0"/></g></g>
+<g fill="#1B3A2A">
+<g transform="translate(140 400)"><path d="M0 0Q8-70 0-130" stroke="#2A1D12" stroke-width="8" fill="none"/><g transform="translate(0 -130)"><ellipse rx="60" ry="9" transform="rotate(-20)"/><ellipse rx="60" ry="9" transform="rotate(30)"/><ellipse rx="54" ry="8" transform="rotate(-60)"/><ellipse rx="54" ry="8" transform="rotate(75)"/></g></g>
+<g transform="translate(560 392) scale(.75)"><path d="M0 0Q-8-70 0-130" stroke="#2A1D12" stroke-width="9" fill="none"/><g transform="translate(0 -130)"><ellipse rx="60" ry="9" transform="rotate(-25)"/><ellipse rx="60" ry="9" transform="rotate(25)"/><ellipse rx="54" ry="8" transform="rotate(-65)"/><ellipse rx="54" ry="8" transform="rotate(70)"/></g></g>
+<g transform="translate(1040 394) scale(.85)"><path d="M0 0Q8-70 0-130" stroke="#2A1D12" stroke-width="9" fill="none"/><g transform="translate(0 -130)"><ellipse rx="60" ry="9" transform="rotate(-15)"/><ellipse rx="60" ry="9" transform="rotate(35)"/><ellipse rx="54" ry="8" transform="rotate(-55)"/><ellipse rx="54" ry="8" transform="rotate(80)"/></g></g>
+<g transform="translate(1470 402)"><path d="M0 0Q-8-70 0-130" stroke="#2A1D12" stroke-width="8" fill="none"/><g transform="translate(0 -130)"><ellipse rx="60" ry="9" transform="rotate(-25)"/><ellipse rx="60" ry="9" transform="rotate(25)"/><ellipse rx="54" ry="8" transform="rotate(-65)"/><ellipse rx="54" ry="8" transform="rotate(70)"/></g></g></g>
+<g id="boatG"><g class="sail"><g class="bob"><g transform="translate(0 540) scale(.9)">
+<path d="M-90-4Q0 34 96-18L80-26L-74-22Z" fill="#2A1A10"/><path d="M6-24L10-190" stroke="#2A1A10" stroke-width="4"/>
+<path d="M12-186L-86-34L80-34Z" fill="#F7F0E2"/><path d="M12-186L80-34L30-34Z" fill="#E2D6BC"/><path d="M-4-190L-30-176L-4-168Z" fill="#B5532E"/></g></g></g></g>
+</svg>
+<div class="in">
+<div class="eyebrow serif"><span data-l="ar">أسوان · النيل</span><span data-l="en">ASWAN · THE NILE</span></div>
+<h1><span data-l="ar">النيل طريقك،<br>والقارب على بُعد نقرة</span><span data-l="en">The Nile is your road.<br>A boat is one tap away.</span></h1>
+<p class="lead" data-l="ar">اطلب قاربًا من أقرب نقطة، وتتبّعه حتى يصل إليك، وادفع كما تفعل مع أي تطبيق نقل.</p>
+<p class="lead" data-l="en">Request a boat from the nearest landing, track it to your door, and pay, just like any ride app.</p>
+<div class="cta"><a class="btn gold" href="app.html"><span data-l="ar">جرّب التطبيق</span><span data-l="en">Try the app</span></a><a class="btn ghost" href="#how"><span data-l="ar">كيف يعمل؟</span><span data-l="en">How it works</span></a></div>
+</div><div class="scroll"><span data-l="ar">مرّر للأسفل</span><span data-l="en">SCROLL</span><i></i></div></section>
+
+<section class="idea"><div class="wrap">
+<div class="kicker rv"><span data-l="ar">الفكرة</span><span data-l="en">The idea</span></div>
+<h2 class="rv"><span data-l="ar">مدينة يقطعها نهر</span><span data-l="en">A city cut by a river</span></h2>
+<p class="big rv" data-l="ar">في أسوان يمرّ النيل بين الضفتين والجزر، فصار القارب وسيلة تنقل حقيقية. نحوّلها إلى خدمة تُطلب من الهاتف بسعر واضح ووقت وصول معروف.</p>
+<p class="big rv" data-l="en">In Aswan the Nile runs between banks and islands, so the boat is a real way to get around. We turn it into a service you order from your phone, with a clear price and a known arrival time.</p>
+<div class="pillars">
+<div class="pill rv"><span class="ic"><svg viewBox="0 0 64 40"><path d="M6 28h52l-7 9H13z" fill="currentColor"/><path d="M22 28v-9h18l7 9z" fill="currentColor" opacity=".55"/></svg></span><b><span data-l="ar">ركّاب</span><span data-l="en">Passengers</span></b><span data-l="ar">تنقّل بين الضفتين والجزر والقرى.</span><span data-l="en">Hop between banks, islands and villages.</span></div>
+<div class="pill rv"><span class="ic"><svg viewBox="0 0 64 40"><path d="M10 14l22-10 22 10v22L32 46 10 36z" transform="translate(0 -6)" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M10 8l22 10 22-10M32 18v22" transform="translate(0 -2)" fill="none" stroke="currentColor" stroke-width="3"/></svg></span><b><span data-l="ar">طرود</span><span data-l="en">Parcels</span></b><span data-l="ar">توصيل صغير ومتوسط وكبير بين النقاط.</span><span data-l="en">Small, medium and large deliveries between landings.</span></div>
+<div class="pill rv"><span class="ic"><svg viewBox="0 0 64 40"><path d="M4 30h56l-7 8H11z" fill="currentColor"/><path d="M32 4v26" stroke="currentColor" stroke-width="3"/><path d="M34 6c14 6 18 16 18 24H34z" fill="currentColor" opacity=".55"/></svg></span><b><span data-l="ar">رحلات نيلية</span><span data-l="en">Nile trips</span></b><span data-l="ar">جولات بالفلوكة بين الجزر والمعالم.</span><span data-l="en">Felucca tours between islands and sights.</span></div>
+</div></div></section>
+
+<section class="how" id="how"><div class="wrap">
+<div class="kicker rv"><span data-l="ar">كيف يعمل</span><span data-l="en">How it works</span></div>
+<h2 class="rv"><span data-l="ar">أربع خطوات فقط</span><span data-l="en">Four simple steps</span></h2>
+<ol class="steps">
+<li class="rv"><b><span data-l="ar">اختر وجهتك</span><span data-l="en">Pick your destination</span></b><span data-l="ar">من القائمة أو من الخريطة، ويظهر السعر حسب المسافة.</span><span data-l="en">From the list or the map. The price follows the distance.</span></li>
+<li class="rv"><b><span data-l="ar">نختار أقرب قارب</span><span data-l="en">We find the nearest boat</span></b><span data-l="ar">ترى القبطان واسم القارب ووقت الوصول المتوقع.</span><span data-l="en">See the captain, the boat and the expected arrival.</span></li>
+<li class="rv"><b><span data-l="ar">تتبّع الرحلة</span><span data-l="en">Track the ride</span></b><span data-l="ar">يصلك تنبيه عند وصول القارب، ثم تتبّع المسافة المتبقية حتى الوجهة.</span><span data-l="en">Get notified when the boat arrives, then follow the remaining distance to the destination.</span></li>
+<li class="rv"><b><span data-l="ar">ادفع وقيّم</span><span data-l="en">Pay and rate</span></b><span data-l="ar">كاش أو بطاقة، ثم قيّم القبطان وأضف إكرامية إن أردت.</span><span data-l="en">Cash or card, then rate the captain and add a tip if you like.</span></li>
+</ol></div></section>
+
+<section class="boats"><div class="wrap">
+<div class="kicker rv"><span data-l="ar">القوارب</span><span data-l="en">The boats</span></div>
+<h2 class="rv"><span data-l="ar">اختر ما يناسب رحلتك</span><span data-l="en">Choose what suits your trip</span></h2>
+<div class="cards">
+<div class="card rv"><svg viewBox="0 0 64 44"><path d="M6 28h52l-7 9H13z" fill="currentColor"/><path d="M22 28v-9h18l7 9z" fill="currentColor" opacity=".55"/></svg><b><span data-l="ar">قارب اقتصادي</span><span data-l="en">Economy boat</span></b><small><span data-l="ar">4 ركاب · الأوفر</span><span data-l="en">4 seats · best value</span></small></div>
+<div class="card rv"><svg viewBox="0 0 64 44"><path d="M4 29h56l-7 9H11z" fill="currentColor"/><path d="M14 29V18h30l8 11z" fill="currentColor" opacity=".55"/><path d="M12 14h34" stroke="currentColor" stroke-width="3"/></svg><b><span data-l="ar">قارب عائلي</span><span data-l="en">Family boat</span></b><small><span data-l="ar">8 ركاب · مساحة أكبر</span><span data-l="en">8 seats · more room</span></small></div>
+<div class="card rv"><svg viewBox="0 0 64 44"><path d="M4 32h56l-7 8H11z" fill="currentColor"/><path d="M32 6v26" stroke="currentColor" stroke-width="3"/><path d="M34 8c14 6 18 16 18 24H34z" fill="currentColor" opacity=".55"/></svg><b><span data-l="ar">فلوكة شراعية</span><span data-l="en">Felucca</span></b><small><span data-l="ar">6 ركاب · الرحلة الهادئة</span><span data-l="en">6 seats · the slow, scenic ride</span></small></div>
+<div class="card rv"><svg viewBox="0 0 64 44"><path d="M12 14l20-9 20 9v20L32 43 12 34z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M12 14l20 9 20-9M32 23v20" fill="none" stroke="currentColor" stroke-width="3"/></svg><b><span data-l="ar">توصيل طرد</span><span data-l="en">Parcel delivery</span></b><small><span data-l="ar">صغير · متوسط · كبير</span><span data-l="en">Small · medium · large</span></small></div>
+</div></div></section>
+
+<section class="map"><div class="wrap">
+<div class="kicker rv"><span data-l="ar">الوجهات</span><span data-l="en">Destinations</span></div>
+<h2 class="rv"><span data-l="ar">على امتداد النيل</span><span data-l="en">Along the Nile</span></h2>
+<p class="rv" data-l="ar">المسافات تقريبية بالكيلومتر من كورنيش النيل، شمالًا وجنوبًا.</p>
+<p class="rv" data-l="en">Approximate distances in km from the Nile Corniche, north and south.</p>
+<div class="river" id="river"></div></div></section>
+
+<section class="built"><div class="wrap">
+<div class="kicker rv"><span data-l="ar">ما تم بناؤه</span><span data-l="en">What's built</span></div>
+<h2 class="rv"><span data-l="ar">منظومة كاملة، لا واجهة فقط</span><span data-l="en">A full system, not just a screen</span></h2>
+<div class="grid">
+<div class="feat rv"><b><span data-l="ar">تطبيق العميل</span><span data-l="en">Customer app</span></b><span data-l="ar">حجز وتتبّع وتقييم، بالعربية والإنجليزية، يُثبَّت على الهاتف.</span><span data-l="en">Book, track and rate, in Arabic and English, installable on the phone.</span></div>
+<div class="feat rv"><b><span data-l="ar">تطبيق القباطنة</span><span data-l="en">Captain app</span></b><span data-l="ar">استقبال الطلبات وتحديد الموقع ورمز بدء الرحلة.</span><span data-l="en">Receive requests, share location, start with a trip code.</span></div>
+<div class="feat rv"><b><span data-l="ar">لوحة الإدارة</span><span data-l="en">Admin panel</span></b><span data-l="ar">تعديل النقاط والأسعار والفئات والنصوص وإدارة القباطنة.</span><span data-l="en">Edit points, prices, classes and texts, and manage captains.</span></div>
+<div class="feat rv"><b><span data-l="ar">خادم وتتبّع مباشر</span><span data-l="en">Server and live tracking</span></b><span data-l="ar">يوزّع الطلب على أقرب قبطان ويحسب السعر على الخادم.</span><span data-l="en">Dispatches to the nearest captain and prices on the server.</span></div>
+<div class="feat rv"><b><span data-l="ar">دفع إلكتروني</span><span data-l="en">Online payment</span></b><span data-l="ar">ربط جاهز مع Paymob بالجنيه المصري، والكاش متاح دائمًا.</span><span data-l="en">Paymob integration in EGP, with cash always available.</span></div>
+<div class="feat rv"><b><span data-l="ar">سعر بالمسافة</span><span data-l="en">Distance-based price</span></b><span data-l="ar">يُحسب تلقائيًا بالجنيه حسب المسافة وفئة القارب.</span><span data-l="en">Calculated automatically in EGP from distance and boat class.</span></div>
+</div>
+<p class="note rv" data-l="ar">هذا نموذج أولي: القوارب في النسخة التجريبية محاكاة، والدفع الإلكتروني الحقيقي يحتاج حساب تاجر.</p>
+<p class="note rv" data-l="en">This is a prototype: boats in the demo are simulated, and real card payments need a merchant account.</p>
+</div></section>
+
+<section class="end"><div class="wrap"><h2 class="rv"><span data-l="ar">جرّبها بنفسك</span><span data-l="en">Try it yourself</span></h2>
+<p class="lead rv" data-l="ar" style="margin-inline:auto">اختر وجهة، واطلب قاربًا، وشاهد القبطان يصل.</p>
+<p class="lead rv" data-l="en" style="margin-inline:auto">Pick a destination, request a boat, and watch the captain arrive.</p>
+<a class="btn gold rv" href="app.html"><span data-l="ar">افتح التطبيق</span><span data-l="en">Open the app</span></a></div></section>
+<footer>Boat delivery · <span data-l="ar">أسوان، مصر</span><span data-l="en">Aswan, Egypt</span></footer>
+
+<script>
+var P=[["مقابر دير الأنبا سمعان","St Simeon Monastery",-6.5],["قبة أبو الهوا","Qubbet el-Hawa",-5],["ضريح الآغا خان","Aga Khan Mausoleum",-4.7],["كورنيش النيل","Nile Corniche",0],["متحف أسوان","Aswan Museum",1.5],["جزيرة الفنتين","Elephantine Island",1.7],["جزيرة كيتشنر","Kitchener's Island",1.8],["المتحف النوبي","Nubian Museum",2],["جزيرة التمساح","Crocodile Island",3.2],["بربر","Berber",4.9],["قرية غرب سهيل","Gharb Soheil Village",6],["جزيرة هيسا","Heissa Island",6.9],["خزان أسوان","Aswan Low Dam",7.9],["متحف فيلة","Philae Museum",12],["السد العالي","Aswan High Dam",17]];
+P[0][0]="دير الأنبا سمعان";
+P.sort(function(a,b){return a[2]-b[2];});
+document.getElementById('river').innerHTML=P.map(function(p){var d=p[2]===0?'0':Math.abs(p[2]);var dirAr=p[2]<0?'شمالًا':(p[2]>0?'جنوبًا':'');var dirEn=p[2]<0?'north':(p[2]>0?'south':'');
+ return '<div class="pt'+(p[2]===0?' me':'')+' rv"><b><span data-l="ar">'+p[0]+'</span><span data-l="en">'+p[1]+'</span></b><em>'+(p[2]===0?'<span data-l="ar">نقطة البداية</span><span data-l="en">Start</span>':d+' <span data-l="ar">كم '+dirAr+'</span><span data-l="en">km '+dirEn+'</span>')+'</em></div>';}).join('');
+var L=document.documentElement,lb=document.getElementById('lang');
+function setLang(l){L.lang=l;L.dir=l==='ar'?'rtl':'ltr';lb.textContent=l==='ar'?'English':'العربية';try{localStorage.setItem('bd_l',l);}catch(e){}}
+try{var s=localStorage.getItem('bd_l');if(s)setLang(s);}catch(e){}
+lb.onclick=function(){setLang(L.lang==='ar'?'en':'ar');};
+var bar=document.getElementById('bar'),sun=document.getElementById('sunG'),boat=document.getElementById('boatG'),ticking=false;
+function onScroll(){var y=window.scrollY||0;bar.classList.toggle('solid',y>window.innerHeight*.6);var k=Math.min(y,900);
+ sun.style.transform='translateY('+(k*.35)+'px)';ticking=false;}
+addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll);}},{passive:true});onScroll();
+var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15}):null;
+document.querySelectorAll('.rv').forEach(function(el,i){if(io){el.style.transitionDelay=(i%4)*70+'ms';io.observe(el);}else el.classList.add('in');});
+</script></body></html>
